@@ -1,0 +1,36 @@
+
+
+//tesmine Poulose 301151876
+<div class="row justify-content-lg-center g-3">
+    <h1><%= title %>Contact list</h1>
+
+    <form method="POST" class="col-lg-6 col-md-10 col-sm-10">
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-name">Name</span>
+            <input type="text" class="form-control" placeholder="Enter Name" aria-label="Contact Name" aria-describedby="Contact Name"
+            name="name" value="<%= contact.name %>" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-name">Email</span>
+            <input type="text" class="form-control" placeholder="Enter email" aria-label="email" aria-describedby="email"
+            name="email" value="<%= contact.email %>" required>
+        </div>
+
+        <div class="input-group mb-3">
+            <span class="input-group-text" id="inputGroup-name">Contactnumber</span>
+            <input type="text" class="form-control" placeholder="Enter contactnumber" aria-label="Contactnumber" aria-describedby="Contactnumber"
+            name="contactnumber" value="<%= contact.contactnumber %>" required>
+        </div>
+   //checking condition
+        
+            <% if(title == "Edit") { %>
+                <button type="submit" id="editButton" class="btn btn-primary"><i class="fas fa-edit fa-lg"></i> Edit</button>
+            <% } else { %>
+                <button type="submit" id="addButton" class="btn btn-primary"><i class="fas fa-plus-circle fa-lg"></i> Add</button>
+            <% } %>  
+            
+            <a href="/contact-list" id="cancelButton" type="button" class="btn btn-warning"><i class="fas fa-undo"></i> Cancel</a>
+        </div>
+    </form>
+</div>
